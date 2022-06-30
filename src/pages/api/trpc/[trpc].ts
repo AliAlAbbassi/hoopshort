@@ -30,7 +30,7 @@ const appRouter = trpc
         await prisma?.shortLink.create({
           data: {
             slug: input.slug,
-            url: input.slug,
+            url: input.url,
           },
         })
       } catch (error) {
