@@ -33,8 +33,8 @@ export const CreateLinkForm: NextPage = ({}) => {
 
   if (createSlug.status === 'success') {
     return (
-      <>
-        <div className='flex justify-center items-center'>
+      <div className='flex flex-col justify-center gap-1'>
+        <div className='flex justify-center items-center gap-2'>
           <h1 className='truncate'>{`${url}/${form.slug}`}</h1>
           <input
             type='button'
@@ -48,13 +48,13 @@ export const CreateLinkForm: NextPage = ({}) => {
         <input
           type='button'
           value='Reset'
-          className='btn btn-active'
+          className='btn btn-active m-auto'
           onClick={() => {
             createSlug.reset()
             setForm({ slug: '', url: '' })
           }}
         />
-      </>
+      </div>
     )
   }
 
